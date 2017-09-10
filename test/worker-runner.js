@@ -29,7 +29,6 @@ self.onmessage = function (e) {
     "to-port-to-wpts/message-event.js": require("./to-port-to-wpts/message-event.js"),
     "to-port-to-wpts/post-message.js": require("./to-port-to-wpts/post-message.js"),
     "to-port-to-wpts/on-error.js": require("./to-port-to-wpts/on-error.js"),
-    "to-port-to-wpts/history.js": require("./to-port-to-wpts/history.js")
   };
 
   var modulesToRun = {};
