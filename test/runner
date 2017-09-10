@@ -34,7 +34,6 @@ var files = [
   "to-port-to-wpts/node-parent-element.js",
   "to-port-to-wpts/on-error.js",
   "to-port-to-wpts/parent-node.js",
-  "to-port-to-wpts/post-message.js",
   "to-port-to-wpts/query-selector-all.js",
   "to-port-to-wpts/query-selector.js",
   "to-port-to-wpts/script.js",
