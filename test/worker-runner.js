@@ -19,7 +19,6 @@ self.onmessage = function (e) {
   var fileFilter, testFilter;
 
   var modules = {
-    "to-port-to-wpts/location.js": require("./to-port-to-wpts/location.js"),
     "to-port-to-wpts/inline-event-handlers.js": require("./to-port-to-wpts/inline-event-handlers.js"),
     "to-port-to-wpts/message-event.js": require("./to-port-to-wpts/message-event.js"),
     "to-port-to-wpts/post-message.js": require("./to-port-to-wpts/post-message.js"),
