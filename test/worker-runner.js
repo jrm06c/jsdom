@@ -21,7 +21,6 @@ self.onmessage = function (e) {
   var modules = {
     "to-port-to-wpts/node-clone-node.js": require("./to-port-to-wpts/node-clone-node.js"),
     "to-port-to-wpts/non-document-type-child-node.js": require("./to-port-to-wpts/non-document-type-child-node.js"),
-    "to-port-to-wpts/htmlcanvaselement.js": require("./to-port-to-wpts/htmlcanvaselement.js"),
     "to-port-to-wpts/htmlelement.js": require("./to-port-to-wpts/htmlelement.js"),
     "to-port-to-wpts/location.js": require("./to-port-to-wpts/location.js"),
     "to-port-to-wpts/inline-event-handlers.js": require("./to-port-to-wpts/inline-event-handlers.js"),
