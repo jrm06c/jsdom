@@ -19,7 +19,6 @@ self.onmessage = function (e) {
   var fileFilter, testFilter;
 
   var modules = {
-    "to-port-to-wpts/dom-implementation.js": require("./to-port-to-wpts/dom-implementation.js"),
     "to-port-to-wpts/node-clone-node.js": require("./to-port-to-wpts/node-clone-node.js"),
     "to-port-to-wpts/non-document-type-child-node.js": require("./to-port-to-wpts/non-document-type-child-node.js"),
     "to-port-to-wpts/htmlanchorelement.js": require("./to-port-to-wpts/htmlanchorelement.js"),
