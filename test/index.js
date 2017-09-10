@@ -38,6 +38,7 @@ require("./to-port-to-wpts/jsonp.js");
 require("./to-port-to-wpts/misc.js");
 require("./to-port-to-wpts/misc2.js");
 require("./to-port-to-wpts/namespaces.js");
+require("./to-port-to-wpts/node-clone-node.js");
 require("./to-port-to-wpts/parsing.js");
 require("./to-port-to-wpts/selectors.js");
 require("./to-port-to-wpts/serialization.js");

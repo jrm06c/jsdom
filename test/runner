@@ -32,7 +32,6 @@ var files = [
   "to-port-to-wpts/inline-event-handlers.js",
   "to-port-to-wpts/location.js",
   "to-port-to-wpts/message-event.js",
-  "to-port-to-wpts/node-clone-node.js",
   "to-port-to-wpts/node-contains.js",
   "to-port-to-wpts/node-iterator.js",
   "to-port-to-wpts/node-owner-document.js",
