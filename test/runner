@@ -28,7 +28,6 @@ var files = [
   "to-port-to-wpts/level3/xpath.js",
 
   "to-port-to-wpts/htmlinputelement.js",
-  "to-port-to-wpts/inline-event-handlers.js",
   "to-port-to-wpts/message-event.js",
   "to-port-to-wpts/node-contains.js",
   "to-port-to-wpts/node-iterator.js",
