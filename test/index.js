@@ -38,6 +38,7 @@ require("./to-port-to-wpts/htmlimageelement.js");
 require("./to-port-to-wpts/inline-event-handlers.js");
 require("./to-port-to-wpts/location.js");
 require("./to-port-to-wpts/jsonp.js");
+require("./to-port-to-wpts/message-event.js");
 require("./to-port-to-wpts/misc.js");
 require("./to-port-to-wpts/misc2.js");
 require("./to-port-to-wpts/namespaces.js");
