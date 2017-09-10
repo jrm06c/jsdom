@@ -27,7 +27,6 @@ if (argv.tests) {
 var files = [
   "to-port-to-wpts/level3/xpath.js",
 
-  "to-port-to-wpts/current-script.js",
   "to-port-to-wpts/dom-implementation.js",
   "to-port-to-wpts/frame.js",
   "to-port-to-wpts/history.js",
