@@ -33,6 +33,7 @@ require("./to-port-to-wpts/frame.js");
 require("./to-port-to-wpts/history.js");
 require("./to-port-to-wpts/htmlanchorelement.js");
 require("./to-port-to-wpts/htmlcanvaselement.js");
+require("./to-port-to-wpts/htmlelement.js");
 require("./to-port-to-wpts/htmlimageelement.js");
 require("./to-port-to-wpts/jsonp.js");
 require("./to-port-to-wpts/misc.js");
