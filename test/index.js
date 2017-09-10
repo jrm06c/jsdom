@@ -29,6 +29,7 @@ require("./to-port-to-wpts/cors.js");
 require("./to-port-to-wpts/css.js");
 require("./to-port-to-wpts/current-script.js");
 require("./to-port-to-wpts/dom-implementation.js");
+require("./to-port-to-wpts/frame.js");
 require("./to-port-to-wpts/jsonp.js");
 require("./to-port-to-wpts/misc.js");
 require("./to-port-to-wpts/misc2.js");
