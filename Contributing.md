@@ -49,7 +49,7 @@ However, the web-platform-tests project is not fully comprehensive. If you need 
 
 **To run specific web-platform-tests already in the manifest**: `npm run test-wpt -- --fgrep dom/events`
 
-(Note for future reference for the maintainers: to update the submodules used for the web-platform-tests use the command `git submodule update --recursive --remote`.)
+Also, to update web platform tests to their latest revision from the source repository: `npm run update-wpt`. (This can take a long time.)
 
 ### jsdom API tests
 

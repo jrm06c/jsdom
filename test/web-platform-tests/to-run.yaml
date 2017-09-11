@@ -1,9 +1,6 @@
 DIR: dom/collections
 
 HTMLCollection-as-proto-length-get-throws.html: [fail,  Brand checks not strict enough, https://github.com/jsdom/webidl2js/issues/62]
-HTMLCollection-supported-property-indices.html: [fail, Named versus indexed properties trickiness]
-HTMLCollection-supported-property-names.html: [fail, Names vs. ids priority and effect on enumeration order]
-domstringmap-supported-property-names.html: [fail, DOMStringMap not implemented]
 
 ---
 
@@ -20,101 +17,89 @@ EventListener-incumbent-global-2.sub.html: [fail, Multi-globals]
 EventListener-invoke-legacy.html: [fail, Animation stuff not implemented]
 EventTarget-constructible.any.html: [fail, Not implemented]
 
-# ---
+---
 
-# DIR: dom/nodes
+DIR: dom/nodes
 
-# CharacterData-appendChild.html: [fail, Unknown]
-# ChildNode-after.html: [fail, Not implemented]
-# ChildNode-before.html: [fail, Not implemented]
-# ChildNode-replaceWith.html: [fail, Not implemented]
-# Comment-constructor.html: [fail, Unknown]
-# DOMImplementation-createDocument.html: [fail, Unknown]
-# Document-URL.sub.html: [fail, Unknown]
-# Document-characterSet-normalization.html: [fail, Unknown]
-# Document-constructor-svg.svg: [fail, Unknown]
-# Document-constructor-xml.xml: [fail, Unknown]
-# Document-constructor.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_bmp.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_css.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_gif.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_jpg.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_mimeheader_01.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_png.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_txt.html: [fail, Unknown]
-# Document-contentType/contentType/contenttype_xml.html: [timeout, Unknown]
-# Document-contentType/contentType/createDocument.html: [fail, Unknown]
-# Document-createElement-namespace.html: [timeout, Unknown]
-# Document-createElement.html: [fail, Unknown]
-# Document-createElementNS.html: [fail, Unknown]
-# Document-createEvent.html: [fail, Unknown]
-# Document-getElementById.html: [fail, We cache IDs in insertion order]
-# Document-getElementsByTagName-xhtml.xhtml
-# Document-getElementsByTagName.html: [fail, We are doing Unicode-aware lowercasing. should be ASCII instead]
-# Element-childElement-null-svg.svg
-# Element-childElement-null-xhtml.xhtml
-# Element-childElementCount-dynamic-add-svg.svg
-# Element-childElementCount-dynamic-add-xhtml.xhtml
-# Element-childElementCount-dynamic-remove-svg.svg
-# Element-childElementCount-dynamic-remove-xhtml.xhtml
-# Element-childElementCount-nochild-svg.svg
-# Element-childElementCount-nochild-xhtml.xhtml
-# Element-childElementCount-svg.svg
-# Element-childElementCount-xhtml.xhtml
-# Element-closest.html: [fail, Not implemented]
-# Element-firstElementChild-entity-xhtml.xhtml
-# Element-firstElementChild-entity.svg
-# Element-firstElementChild-namespace-svg.svg
-# Element-firstElementChild-namespace-xhtml.xhtml
-# Element-firstElementChild-svg.svg
-# Element-firstElementChild-xhtml.xhtml
-# Element-getElementsByTagName-change-document-HTMLNess.html
-# Element-getElementsByTagName.html: [fail, We are doing Unicode-aware lowercasing. should be ASCII instead]
-# Element-insertAdjacentElement.html
-# Element-insertAdjacentText.html
-# Element-lastElementChild-svg.svg
-# Element-lastElementChild-xhtml.xhtml
-# Element-matches.html
-# Element-previousElementSibling-svg.svg
-# Element-previousElementSibling-xhtml.xhtml
-# Element-siblingElement-null-svg.svg
-# Element-siblingElement-null-xhtml.xhtml
-
-# Element-webkitMatchesSelector.html
-# MutationObserver-attributes.html: [fail, Not implemented]
-# MutationObserver-characterData.html: [fail, Not implemented]
-# MutationObserver-childList.html: [fail, Not implemented]
-# MutationObserver-disconnect.html: [fail, Not implemented]
-# MutationObserver-document.html: [fail, Not implemented]
-# MutationObserver-inner-outer.html: [fail, Not implemented]
-# MutationObserver-takeRecords.html: [fail, Not implemented]
-# Node-appendChild.html
-# Node-childNodes.html
-# Node-contains-xml.xml
-# Node-insertBefore.html
-# Node-isConnected.html
-# Node-isEqualNode-xhtml.xhtml
-# Node-isSameNode.html
-# Node-lookupNamespaceURI.html
-# Node-lookupPrefix.xhtml
-# Node-nodeValue.html
-# Node-properties.html
-# Node-replaceChild.html
-# Node-textContent.html
-# ParentNode-append.html
-# ParentNode-prepend.html
-# ParentNode-querySelector-All-xht.xht
-# ParentNode-querySelector-All.html
-# ProcessingInstruction-escapes-1.xhtml
-# ProcessingInstruction-literal-1.xhtml
-# Text-constructor.html
-# append-on-Document.html
-# case.html
-# getElementsByClassName-11.xml
-# insert-adjacent.html
-# prepend-on-Document.html
-# remove-unscopable.html
-# rootNode.html
+CharacterData-appendChild.html: [fail, Unknown]
+ChildNode-after.html: [fail, Not implemented]
+ChildNode-before.html: [fail, Not implemented]
+ChildNode-replaceWith.html: [fail, Not implemented]
+Comment-constructor.html: [fail, Unknown]
+DOMImplementation-createDocument.html: [fail, Unknown]
+Document-URL.sub.html: [fail, Unknown]
+Document-characterSet-normalization.html: [fail, Unknown]
+Document-constructor-xml.xml: [fail, Unknown]
+Document-constructor.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_bmp.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_css.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_gif.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_jpg.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_mimeheader_01.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_png.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_txt.html: [fail, Unknown]
+Document-contentType/contentType/contenttype_xml.html: [timeout, Unknown]
+Document-contentType/contentType/createDocument.html: [fail, Unknown]
+Document-createElement-namespace.html: [timeout, Unknown]
+Document-createElement.html: [fail, Unknown]
+Document-createElementNS.html: [fail, Unknown]
+Document-createEvent.html: [fail, Unknown]
+Document-getElementById.html: [fail, We cache IDs in insertion order]
+Document-getElementsByTagName-xhtml.xhtml: [fail, Unknown]
+Document-getElementsByTagName.html: [fail, We are doing Unicode-aware lowercasing. should be ASCII instead]
+Element-childElement-null-xhtml.xhtml: [fail, Unknown]
+Element-childElementCount-dynamic-add-xhtml.xhtml: [fail, Unknown]
+Element-childElementCount-dynamic-remove-xhtml.xhtml: [fail, Unknown]
+Element-childElementCount-nochild-xhtml.xhtml: [fail, Unknown]
+Element-childElementCount-xhtml.xhtml: [fail, Unknown]
+Element-closest.html: [fail, Not implemented]
+Element-firstElementChild-entity-xhtml.xhtml: [fail, Unknown]
+Element-firstElementChild-namespace-xhtml.xhtml: [fail, Unknown]
+Element-firstElementChild-xhtml.xhtml: [fail, Unknown]
+Element-getElementsByTagName-change-document-HTMLNess.html: [fail, Unknown]
+Element-getElementsByTagName.html: [fail, We are doing Unicode-aware lowercasing. should be ASCII instead]
+Element-insertAdjacentElement.html: [fail, Not implemented]
+Element-insertAdjacentText.html: [fail, Not implemented]
+Element-lastElementChild-xhtml.xhtml: [fail, Unknown]
+Element-matches.html: [fail, Unknown]
+Element-nextElementSibling-xhtml.xhtml: [fail, Unknown]
+Element-previousElementSibling-xhtml.xhtml: [fail, Unknown]
+Element-siblingElement-null-xhtml.xhtml: [fail, Unknown]
+Element-webkitMatchesSelector.html: [fail, Unknown]
+MutationObserver-attributes.html: [fail, Not implemented]
+MutationObserver-characterData.html: [fail, Not implemented]
+MutationObserver-childList.html: [fail, Not implemented]
+MutationObserver-disconnect.html: [fail, Not implemented]
+MutationObserver-document.html: [fail, Not implemented]
+MutationObserver-inner-outer.html: [fail, Not implemented]
+MutationObserver-takeRecords.html: [fail, Not implemented]
+Node-appendChild.html: [fail, Unknown]
+Node-childNodes.html: [fail, Unknown]
+Node-contains-xml.xml: [fail, Unknown]
+Node-insertBefore.html: [fail, Unknown]
+Node-isConnected.html: [fail, Unknown]
+Node-isEqualNode-xhtml.xhtml: [fail, Unknown]
+Node-isSameNode.html: [fail, Unknown]
+Node-lookupNamespaceURI.html: [fail, Unknown]
+Node-lookupPrefix.xhtml: [fail, Unknown]
+Node-nodeValue.html: [fail, Unknown]
+Node-properties.html: [fail, Unknown]
+Node-replaceChild.html: [fail, Unknown]
+Node-textContent.html: [fail, Unknown]
+ParentNode-append.html: [fail, Unknown]
+ParentNode-prepend.html: [fail, Unknown]
+ParentNode-querySelector-All-xht.xht: [fail, Unknown]
+ParentNode-querySelector-All.html: [fail, Unknown]
+ProcessingInstruction-escapes-1.xhtml: [fail, Unknown]
+ProcessingInstruction-literal-1.xhtml: [fail, Unknown]
+Text-constructor.html: [fail, Unknown]
+append-on-Document.html: [fail, Unknown]
+case.html: [fail, Unknown]
+getElementsByClassName-11.xml: [fail, Unknown]
+insert-adjacent.html: [fail, Unknown]
+prepend-on-Document.html: [fail, Unknown]
+remove-unscopable.html: [fail, Unknown]
+rootNode.html: [fail, Unknown]
 
 ---
 
@@ -138,11 +123,24 @@ innerhtml-05.xhtml: [fail, Unknown]
 insert_adjacent_html-xhtml.xhtml: [fail, Unknown]
 xml-serialization.xhtml: [fail, Unknown]
 
-# ---
+---
 
-# DIR: html/browsers/browsing-the-web/history-traversal
+DIR: html/browsers/browsing-the-web/history-traversal
 
-# 001.html: [fail, Unknown]
+001.html: [fail, Unknown]
+browsing_context_name.html: [timeout, Unknown]
+browsing_context_name_cross_origin.html: [timeout, Unknown]
+browsing_context_name_cross_origin_2.html: [fail, window.name unimplemented]
+browsing_context_name_cross_origin_3.html: [fail, window.name unimplemented]
+events.html: [fail, PageTransitionEvent not defined]
+persisted-user-state-restoration/resume-timer-on-history-back.html: [timeout, Unknown]
+persisted-user-state-restoration/scroll-restoration-basic.html: [fail, Unimplemented]
+persisted-user-state-restoration/scroll-restoration-fragment-scrolling-cross-origin.html: [fail, depends on requestAnimationFrame]
+persisted-user-state-restoration/scroll-restoration-fragment-scrolling-samedoc.html: [fail, scrollY not implemented]
+persisted-user-state-restoration/scroll-restoration-navigation-cross-origin.html: [fail, scrollY not implemented]
+persisted-user-state-restoration/scroll-restoration-navigation-samedoc.html: [fail, scrollX not implemented]
+same-url.html: [timeout, Unknown]
+unset_context_name-1.html: [fail, window.name unimplemented]
 
 ---
 
@@ -197,6 +195,7 @@ history_go_no_argument.html: [timeout, Unknown]
 history_go_to_uri.html: [timeout, Unknown]
 history_go_undefined.html: [timeout, Unknown]
 history_go_zero.html: [timeout, Unknown]
+history_properties_only_fully_active.html: [fail, Unknown]
 joint_session_history/001.html: [timeout, Unknown]
 joint_session_history/002.html: [timeout, Unknown]
 traverse_the_history_1.html: [timeout, Unknown]
@@ -326,6 +325,7 @@ the-translate-attribute-012.html: [fail, Unknown]
 
 DIR: html/editing/focus
 
+tabindex-focus-flag.html: [fail, Unknown]
 processing-model/focus-fixup-rule-one-no-dialogs.html: [fail, Unknown]
 
 ---
@@ -347,6 +347,16 @@ the-marquee-element-0/marquee-events.html: [fail, <marquee> is not implemented]
 the-marquee-element-0/marquee-loop.html: [fail, <marquee> is not implemented]
 the-marquee-element-0/marquee-scrollamount.html: [fail, <marquee> is not implemented]
 the-marquee-element-0/marquee-scrolldelay.html: [fail, <marquee> is not implemented]
+
+---
+
+DIR: html/semantics/disabled-elements
+
+---
+
+DIR: html/semantics/document-metadata/the-base-element
+
+base_multiple.html: [timeout, We don't support navigation via <a target>]
 
 ---
 
@@ -444,16 +454,6 @@ DIR: html/semantics/forms/the-textarea-element
 cloning-steps.html: [fail, Unknown]
 value-defaultValue-textContent-xhtml.xhtml: [fail, Unknown]
 
----
-
-DIR: html/semantics/disabled-elements
-
----
-
-DIR: html/semantics/document-metadata/the-base-element
-
-base_multiple.html: [timeout, We don't support navigation via <a target>]
-
 # ---
 
 # DIR: html/semantics/scripting-1/the-script-element
@@ -499,16 +499,15 @@ remove-row.html: [fail, Unknown]
 tFoot.html: [fail, Missing setter, https://github.com/tmpvar/jsdom/issues/1968]
 tHead.html: [fail, Missing setter, https://github.com/tmpvar/jsdom/issues/1968]
 table-rows.html: [fail, Unknown]
+---
+
+DIR: html/syntax/parsing/template
 
 ---
 
 DIR: html/syntax/serializing-html-fragments
 
 serializing.html: [fail, Unknown]
-
----
-
-DIR: html/syntax/parsing/template
 
 ---
 
