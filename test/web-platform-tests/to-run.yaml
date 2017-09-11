@@ -1,3 +1,19 @@
+DIR: FileAPI
+
+blob/Blob-XHR-revoke.html: [fail, URL.createObjectURL not implemented]
+blob/Blob-constructor.html: [fail, "- Blob is not a function
+                                    - a date is not instanceof Date
+                                    - a regexp is not instanceof Regexp
+                                    - strange v8 behaviour when error triggered in overridden array length
+                                    - HTMLSelectElement does not have indexed properties
+                                    - MessageChannel not implemented
+                                    - element attributes does not have indexed properties"]
+filelist-section/filelist.html: [fail, function is not instanceof Function]
+idlharness.html: [fail, URL.createObjectURL not implemented]
+url/**: [fail, blob URLs not implemented]
+
+---
+
 DIR: dom/collections
 
 HTMLCollection-as-proto-length-get-throws.html: [fail,  Brand checks not strict enough, https://github.com/jsdom/webidl2js/issues/62]
@@ -66,13 +82,7 @@ Element-nextElementSibling-xhtml.xhtml: [fail, Unknown]
 Element-previousElementSibling-xhtml.xhtml: [fail, Unknown]
 Element-siblingElement-null-xhtml.xhtml: [fail, Unknown]
 Element-webkitMatchesSelector.html: [fail, Unknown]
-MutationObserver-attributes.html: [fail, Not implemented]
-MutationObserver-characterData.html: [fail, Not implemented]
-MutationObserver-childList.html: [fail, Not implemented]
-MutationObserver-disconnect.html: [fail, Not implemented]
-MutationObserver-document.html: [fail, Not implemented]
-MutationObserver-inner-outer.html: [fail, Not implemented]
-MutationObserver-takeRecords.html: [fail, Not implemented]
+MutationObserver-**: [fail, Not implemented]
 Node-appendChild.html: [fail, Unknown]
 Node-childNodes.html: [fail, Unknown]
 Node-contains-xml.xml: [fail, Unknown]
@@ -251,21 +261,7 @@ auxiliary-browsing-contexts/opener-multiple.html: [timeout, Unknown]
 auxiliary-browsing-contexts/opener-noopener.html: [timeout, Unknown]
 auxiliary-browsing-contexts/opener-noreferrer.html: [timeout, Unknown]
 auxiliary-browsing-contexts/opener.html: [timeout, Unknown]
-browsing-context-names/choose-_blank-001.html: [fail, Unknown]
-browsing-context-names/choose-_blank-002.html: [timeout, Unknown]
-browsing-context-names/choose-_blank-003.html: [timeout, Unknown]
-browsing-context-names/choose-_parent-001.html: [timeout, Unknown]
-browsing-context-names/choose-_parent-002.html: [timeout, Unknown]
-browsing-context-names/choose-_parent-003.html: [timeout, Unknown]
-browsing-context-names/choose-_parent-004.html: [timeout, Unknown]
-browsing-context-names/choose-_self-001.html: [timeout, Unknown]
-browsing-context-names/choose-_self-002.html: [timeout, Unknown]
-browsing-context-names/choose-_top-001.html: [timeout, Unknown]
-browsing-context-names/choose-_top-002.html: [timeout, Unknown]
-browsing-context-names/choose-_top-003.html: [timeout, Unknown]
-browsing-context-names/choose-default-001.html: [fail, Unknown]
-browsing-context-names/choose-default-002.html: [timeout, Unknown]
-browsing-context-names/choose-existing-001.html: [timeout, Unknown]
+browsing-context-names/**: [fail, unimplemented]
 browsing-context.html: [fail, Unknown]
 nested-browsing-contexts/frameElement.html: [fail, Unknown]
 nested-browsing-contexts/window-parent-null.html: [fail, Unknown]
@@ -454,29 +450,39 @@ DIR: html/semantics/forms/the-textarea-element
 cloning-steps.html: [fail, Unknown]
 value-defaultValue-textContent-xhtml.xhtml: [fail, Unknown]
 
-# ---
+---
 
-# DIR: html/semantics/scripting-1/the-script-element
+DIR: html/semantics/scripting-1/the-script-element
 
-# async_001.htm: [timeout, Unknown]
-# async_002.htm: [timeout, Unknown]
-# async_003.htm: [timeout, Unknown]
-# async_004.htm: [timeout, Unknown]
-# async_005.htm: [timeout, Unknown]
-# async_006.htm: [timeout, Unknown]
-# async_008.htm: [timeout, Unknown]
-# async_009.htm: [timeout, Unknown]
-# async_011.htm: [timeout, Unknown]
-# data-url.html: [timeout, Unknown]
-# fetch-src/empty.html: [timeout, Unknown]
-# fetch-src/empty-with-base.html: [timeout, Unknown]
-# fetch-src/failure.html: [timeout, Unknown]
-# load-error-events-1.html
-# load-error-events-2.html
-# load-error-events-3.html
-# charset-01.html
-# charset-02.html
-# charset-03.html
+async_001.htm: [timeout, Unknown]
+async_002.htm: [timeout, Unknown]
+async_003.htm: [timeout, Unknown]
+async_004.htm: [timeout, Unknown]
+async_005.htm: [timeout, Unknown]
+async_006.htm: [timeout, Unknown]
+async_008.htm: [timeout, Unknown]
+async_009.htm: [timeout, Unknown]
+async_011.htm: [timeout, Unknown]
+data-url.html: [timeout, Unknown]
+fetch-src/empty.html: [timeout, Unknown]
+fetch-src/empty-with-base.html: [timeout, Unknown]
+fetch-src/failure.html: [timeout, Unknown]
+load-error-events-1.html: [timeout, Unknown]
+load-error-events-2.html: [timeout, Unknown]
+load-error-events-3.html: [timeout, Unknown]
+module/**: [fail, unimplemented]
+nomodule-**: [fail, unimplemented]
+script-charset-02.html: [fail, Unknown]
+script-charset-03.html: [fail, Unknown]
+script-crossorigin.html: [fail, Unknown]
+script-for-event-xhtml.xhtml: [fail, Unimplemented]
+script-for-event.html: [fail, Unimplemented]
+script-languages-02.html: [fail, Unknown]
+script-not-executed-after-shutdown.html: [fail, Unknown]
+script-not-found-not-executed.html: [fail, Unknown]
+script-onerror-insertion-point-1.html: [fail, Unknown]
+script-onload-insertion-point.html: [fail, Unknown]
+script-text-xhtml.xhtml: [fail, Unknown]
 
 ---
 
@@ -493,12 +499,6 @@ template-element/node-document-changes.html: [fail, Unknown]
 
 DIR: html/semantics/tabular-data/the-table-element
 
-caption-methods.html: [fail, Not implemented]
-createTBody.html: [fail, Not implemented]
-remove-row.html: [fail, Unknown]
-tFoot.html: [fail, Missing setter, https://github.com/tmpvar/jsdom/issues/1968]
-tHead.html: [fail, Missing setter, https://github.com/tmpvar/jsdom/issues/1968]
-table-rows.html: [fail, Unknown]
 ---
 
 DIR: html/syntax/parsing/template
@@ -513,9 +513,20 @@ serializing.html: [fail, Unknown]
 
 DIR: html/webappapis/atob
 
-# ---
+---
 
-# DIR: html/webappapis/scripting/events
+DIR: html/webappapis/scripting/events
+
+compile-event-handler-settings-objects.html: [fail, Unknown]
+event-handler-all-global-events.html: [fail, depends on fetch]
+event-handler-processing-algorithm-error/script-element.html: [timeout, Unknown]
+event-handler-processing-algorithm-error/synthetic-errorevent-click.html: [fail, uses Worker]
+event-handler-processing-algorithm-error/worker.html: [fail, workers]
+messageevent-constructor.https.html: [fail, uses MessageChannel]
+
+---
+
+DIR: progress-events
 
 ---
 
@@ -535,32 +546,8 @@ urlsearchparams-sort.html: [fail, Unknown]
 
 # ---
 
-# DIR: FileAPI
-
-# blob/Blob-XHR-revoke.html: [fail, URL.createObjectURL not implemented]
-# blob/Blob-constructor.html: [fail, "- Blob is not a function
-#                                     - a date is not instanceof Date
-#                                     - a regexp is not instanceof Regexp
-#                                     - strange v8 behaviour when error triggered in overridden array length
-#                                     - HTMLSelectElement does not have indexed properties
-#                                     - MessageChannel not implemented
-#                                     - element attributes does not have indexed properties"]
-# filelist-section/filelist.html: [fail, function is not instanceof Function]
-# idlharness.html: [fail, URL.createObjectURL not implemented]
-# url/blob-url-in-sandboxed-iframe.html: [timeout, Unknown]
-# url/multi-global-origin-serialization.sub.html: [fail, Unknown]
-# url/origin.sub: [fail, URL.createObjectURL not implemented]
-# url/url_createobjecturl_blob.html: [fail, URL.createObjectURL not implemented]
-# url/url_xmlhttprequest.html: [fail, URL.createObjectURL not implemented]
-
-# ---
-
 # DIR: XMLHttpRequest
 
 # ---
 
 # DIR: cors
-
-# ---
-
-# DIR: progress-events

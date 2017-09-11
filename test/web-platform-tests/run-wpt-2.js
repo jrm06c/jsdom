@@ -2,6 +2,7 @@
 const path = require("path");
 const fs = require("fs");
 const jsYAML = require("js-yaml");
+const minimatch = require("minimatch");
 const { before, describe, specify } = require("mocha-sugar-free");
 const runWebPlatformTest = require("./run-web-platform-test.js")(path.resolve(__dirname, "tests"));
 
@@ -26,18 +27,21 @@ before(() => {
 });
 
 describe("Web platform tests", () => {
-  for (const testFilePath of possibleTestFilePaths) {
-    for (const toRunDoc of toRunDocs) {
-      if (testFilePath.startsWith(toRunDoc.DIR + "/")) {
-        const result = toRunDoc[stripPrefix(testFilePath, toRunDoc.DIR + "/")];
+  for (const toRunDoc of toRunDocs) {
+    describe(toRunDoc.DIR, () => {
+      for (const testFilePath of possibleTestFilePaths) {
+        if (testFilePath.startsWith(toRunDoc.DIR + "/")) {
+          const testFile = stripPrefix(testFilePath, toRunDoc.DIR + "/");
+          const skip = expectationsInDoc(toRunDoc).some(pattern => minimatch(testFile, pattern));
 
-        if (result) {
-          specify.skip(testFilePath);
-        } else {
-          runWebPlatformTest(testFilePath);
+          if (skip) {
+            specify.skip(testFilePath);
+          } else {
+            runWebPlatformTest(testFilePath);
+          }
         }
       }
-    }
+    });
   }
 });
 
@@ -78,17 +82,20 @@ function checkToRun() {
   }
 
   // Check that there aren't any fail/timeout expectations for files that aren't in the manifest
-  const possibleTestFilePathsSet = new Set(possibleTestFilePaths);
-  for (const doc of toRunDocs) {
-    for (const testFile of Object.keys(doc)) {
-      if (testFile === "DIR") {
-        continue;
-      }
+  // This is too slow (way too many nested loops).
+  // for (const doc of toRunDocs) {
+  //   for (const pattern of expectationsInDoc(doc)) {
+  //     const fullPattern = doc.DIR + "/" + pattern;
+  //     const matchesAny = possibleTestFilePaths.some(testFile => minimatch(testFile, fullPattern));
+  //     if (!matchesAny) {
+  //       throw new Error(`Pattern ${fullPattern} does not match any files in the manifest`);
+  //     }
+  //   }
+  // }
+}
 
-      const testFilePath = doc.DIR + "/" + testFile;
-      if (!possibleTestFilePathsSet.has(testFilePath)) {
-        throw new Error(`Test file ${testFilePath} does not exist in the manifest`);
-      }
-    }
-  }
+function expectationsInDoc(doc) {
+  const keys = Object.keys(doc);
+  keys.shift(); // get rid of the DIR key
+  return keys;
 }
