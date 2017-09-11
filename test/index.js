@@ -55,6 +55,7 @@ require("./to-port-to-wpts/parsing.js");
 require("./to-port-to-wpts/post-message.js");
 require("./to-port-to-wpts/query-selector-all.js");
 require("./to-port-to-wpts/query-selector.js");
+require("./to-port-to-wpts/script.js");
 require("./to-port-to-wpts/selectors.js");
 require("./to-port-to-wpts/serialization.js");
 require("./to-port-to-wpts/xml.js");
