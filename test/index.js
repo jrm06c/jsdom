@@ -44,6 +44,7 @@ require("./to-port-to-wpts/misc.js");
 require("./to-port-to-wpts/misc2.js");
 require("./to-port-to-wpts/namespaces.js");
 require("./to-port-to-wpts/node-clone-node.js");
+require("./to-port-to-wpts/node-contains.js");
 require("./to-port-to-wpts/non-document-type-child-node.js");
 require("./to-port-to-wpts/on-error.js");
 require("./to-port-to-wpts/parsing.js");
