@@ -35,6 +35,7 @@ require("./to-port-to-wpts/htmlanchorelement.js");
 require("./to-port-to-wpts/htmlcanvaselement.js");
 require("./to-port-to-wpts/htmlelement.js");
 require("./to-port-to-wpts/htmlimageelement.js");
+require("./to-port-to-wpts/htmlinputelement.js");
 require("./to-port-to-wpts/inline-event-handlers.js");
 require("./to-port-to-wpts/location.js");
 require("./to-port-to-wpts/jsonp.js");
