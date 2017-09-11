@@ -14,6 +14,105 @@ url/**: [fail, blob URLs not implemented]
 
 ---
 
+DIR: XMLHttpRequest
+
+abort-after-send.htm: [fail, https://github.com/w3c/web-platform-tests/issues/6940]
+abort-after-stop.htm: [fail, https://github.com/w3c/web-platform-tests/issues/6942]
+access-control-basic-allow-preflight-cache.htm: [fail, Unknown]
+access-control-basic-non-cors-safelisted-content-type.htm: [fail, Unknown]
+access-control-basic-post-with-non-cors-safelisted-content-type.htm: [fail, Unknown]
+access-control-preflight-async-header-denied.htm: [fail, Unknown]
+access-control-preflight-async-method-denied.htm: [fail, Unknown]
+access-control-preflight-credential-async.htm: [fail, Unknown]
+access-control-preflight-credential-sync.htm: [fail, Unknown]
+access-control-preflight-headers-async.htm: [fail, Unknown]
+access-control-preflight-headers-sync.htm: [fail, Unknown]
+access-control-preflight-request-header-lowercase.htm: [fail, Unknown]
+access-control-preflight-request-header-sorted.htm: [fail, Unknown]
+access-control-preflight-sync-header-denied.htm: [fail, Unknown]
+access-control-preflight-sync-method-denied.htm: [fail, Unknown]
+anonymous-mode-unsupported.htm: [fail, need way to set cookie header with original casing]
+data-uri.htm: [fail, Unknown]
+event-error-order.sub.html: [fail, Unknown]
+event-timeout-order.htm: [fail, Unknown]
+getallresponseheaders-cl.htm: [fail, depends on fetch]
+getallresponseheaders.htm: [fail, Unknown]
+headers-normalize-response.htm: [fail, Unknown]
+interfaces.html: [fail, really need to move XHR to Web IDL]
+loadstart-and-state.html: [fail, Unknown]
+open-during-abort-processing.htm: [fail, Unknown]
+open-method-case-sensitive.htm: [fail, request module forces upper case]
+open-send-during-abort.htm: [fail, Unknown]
+open-url-bogus.htm: [fail, I don't understand this one]
+open-url-multi-window-4.htm: [fail, https://github.com/w3c/web-platform-tests/issues/6941]
+open-url-multi-window-5.htm: [fail, location.reload is not implemented]
+open-url-multi-window-6.htm: [fail, Unknown]
+open-url-redirected-worker-origin.htm: [fail, needs Worker implementation]
+open-url-worker-origin.htm: [fail, needs Worker implementation]
+open-url-worker-simple.htm: [fail, needs Worker implementation]
+overridemimetype-blob.html: [fail, Unknown]
+responsetext-decoding.htm: [fail, Unknown]
+responsetype.html: [timeout, https://github.com/tmpvar/jsdom/issues/1833]
+responsexml-document-properties.htm: [fail, https://github.com/w3c/web-platform-tests/issues/2668]
+responsexml-media-type.htm: [timeout, https://github.com/tmpvar/jsdom/issues/1833]
+responsexml-non-well-formed.htm: [fail, xml parsing is not strict]
+send-after-setting-document-domain.htm: [fail, document.domain not implemented]
+send-authentication-cors-setrequestheader-no-cred.htm: [fail, Unknown]
+send-blob-with-no-mime-type.html: [fail, Unknown]
+send-conditional-cors.htm: [timeout, Unknown]
+send-entity-body-basic.htm: [fail, needs URLSearchParams implementation]
+send-entity-body-document-bogus.htm: [fail, needs proper XML serializer]
+send-entity-body-document.htm: [timeout, https://github.com/tmpvar/jsdom/issues/1833]
+send-entity-body-empty.htm: [fail, hard to get Node to not send Content-Length]
+send-entity-body-get-head-async.htm: [fail, hard to get Node to not send Content-Length]
+send-entity-body-get-head.htm: [fail, hard to get Node to not send Content-Length]
+send-entity-body-none.htm: [fail, hard to get Node to not send Content-Length]
+send-redirect-infinite-sync.htm: [fail, the test seems broken locally]
+send-redirect-infinite.htm: [fail, the test seems broken locally]
+send-redirect-post-upload.htm: [fail, Unknown]
+send-redirect-to-cors.htm: [fail, request module remove content-type header on redirect]
+send-redirect.htm: [fail, request module remove content-type header on redirect]
+send-response-event-order.htm: [fail, why no readystatechange for headers received? Test seems wrong maybe?]
+send-sync-response-event-order.htm: [fail, not sure; sync is special]
+send-usp.html: [fail, needs URLSearchParams implementation]
+setrequestheader-allow-empty-value.htm: [fail, something goes wrong with empty headers https://github.com/tmpvar/jsdom/issues/1949]
+setrequestheader-allow-whitespace-in-value.htm: [fail, something goes wrong with empty headers https://github.com/tmpvar/jsdom/issues/1949]
+setrequestheader-content-type.htm: [fail, we don't implement URLSearchParams or ReadableStream; also unsure we can get request() to send no content-type for ArrayBuffer]
+status-basic.htm: [timeout, https://github.com/tmpvar/jsdom/issues/1833]
+xmlhttprequest-network-error-sync.htm: [fail, the test seems broken locally]
+xmlhttprequest-network-error.htm: [fail, the test seems broken locally]
+xmlhttprequest-sync-block-scripts.html: [fail, something wrong with our data URL parser]
+xmlhttprequest-sync-not-hang-scriptloader.html: [fail, something wrong with our data URL parser]
+xmlhttprequest-timeout-aborted.html: [fail, self instanceof Window fails]
+xmlhttprequest-timeout-abortedonmain.html: [fail, self instanceof Window fails]
+xmlhttprequest-timeout-overrides.html: [fail, self instanceof Window fails]
+xmlhttprequest-timeout-overridesexpires.html: [fail, self instanceof Window fails]
+xmlhttprequest-timeout-simple.html: [fail, self instanceof Window fails]
+xmlhttprequest-timeout-synconmain.html: [fail, self instanceof Window fails]
+xmlhttprequest-timeout-twice.html: [fail, self instanceof Window fails]
+xmlhttprequest-timeout-worker-aborted.html: [fail, needs worker implementation]
+xmlhttprequest-timeout-worker-overrides.html: [fail, needs worker implementation]
+xmlhttprequest-timeout-worker-overridesexpires.html: [fail, needs worker implementation]
+xmlhttprequest-timeout-worker-simple.html: [fail, needs worker implementation]
+xmlhttprequest-timeout-worker-synconworker.html: [fail, needs worker implementation]
+xmlhttprequest-timeout-worker-twice.html: [fail, needs worker implementation]
+
+---
+
+DIR: cors
+
+304.htm: [fail, Unknown]
+access-control-expose-headers-parsing.window.html: [fail, Requires fetch]
+allow-headers.htm: [timeout, https://github.com/tmpvar/jsdom/issues/1833]
+origin.htm: [timeout, https://github.com/tmpvar/jsdom/issues/1833]
+preflight-cache.htm: [fail, cache should probably be implemented for simple requests before]
+redirect-preflight-2.htm: [fail, preflight should also be done before redirected requests but request module redirects cannot be paused while doing preflight]
+remote-origin.htm: [fail, postMessage event does not contain source]
+response-headers.htm: [fail, I don't find a spec about combining same value response headers; also https://github.com/tmpvar/jsdom/issues/1833]
+simple-requests.htm: [fail, maybe https://github.com/tmpvar/jsdom/issues/1833, but fails locally too]
+
+---
+
 DIR: dom/collections
 
 HTMLCollection-as-proto-length-get-throws.html: [fail,  Brand checks not strict enough, https://github.com/jsdom/webidl2js/issues/62]
@@ -23,7 +122,6 @@ HTMLCollection-as-proto-length-get-throws.html: [fail,  Brand checks not strict 
 DIR: dom/events
 
 AddEventListenerOptions-passive.html: [fail, Not implemented, https://github.com/tmpvar/jsdom/issues/1609]
-EventTarget-dispatchEvent.html: [fail, We don't support every event interface yet]
 Event-dispatch-click.html: [fail, Unknown]
 Event-dispatch-redispatch.html: [fail, Unknown]
 Event-subclasses-constructors.html: [fail, We don't support every event interface yet]
@@ -32,6 +130,7 @@ EventListener-incumbent-global-1.sub.html: [fail, Multi-globals]
 EventListener-incumbent-global-2.sub.html: [fail, Multi-globals]
 EventListener-invoke-legacy.html: [fail, Animation stuff not implemented]
 EventTarget-constructible.any.html: [fail, Not implemented]
+EventTarget-dispatchEvent.html: [fail, We don't support every event interface yet]
 
 ---
 
@@ -321,8 +420,8 @@ the-translate-attribute-012.html: [fail, Unknown]
 
 DIR: html/editing/focus
 
-tabindex-focus-flag.html: [fail, Unknown]
 processing-model/focus-fixup-rule-one-no-dialogs.html: [fail, Unknown]
+tabindex-focus-flag.html: [fail, Unknown]
 
 ---
 
@@ -464,8 +563,8 @@ async_008.htm: [timeout, Unknown]
 async_009.htm: [timeout, Unknown]
 async_011.htm: [timeout, Unknown]
 data-url.html: [timeout, Unknown]
-fetch-src/empty.html: [timeout, Unknown]
 fetch-src/empty-with-base.html: [timeout, Unknown]
+fetch-src/empty.html: [timeout, Unknown]
 fetch-src/failure.html: [timeout, Unknown]
 load-error-events-1.html: [timeout, Unknown]
 load-error-events-2.html: [timeout, Unknown]
@@ -491,13 +590,17 @@ DIR: html/semantics/scripting-1/the-template-element
 additions-to-parsing-xhtml-documents/node-document.html: [timeout, Unknown]
 additions-to-parsing-xhtml-documents/template-child-nodes.html: [timeout, Unknown]
 additions-to-serializing-xhtml-documents/outerhtml.html: [fail, Unknown]
-definitions/template-contents-owner-test-001.html: [fail, Unknown]
-definitions/template-contents-owner-test-002.html: [fail, Unknown]
-template-element/node-document-changes.html: [fail, Unknown]
+definitions/template-contents-owner-test-001.html: [fail, template content owner document semantics not yet implemented]
+definitions/template-contents-owner-test-002.html: [fail, template content owner document semantics not yet implemented]
+template-element/node-document-changes.html: [fail, template content owner document semantics not yet implemented]
 
 ---
 
-DIR: html/semantics/tabular-data/the-table-element
+DIR: html/semantics/tabular-data
+
+attributes-common-to-td-and-th-elements/cellIndex.html: [fail, Unknown]
+historical.html: [fail, sorted is still implemented]
+processing-model-1/col-span-limits.html: [fail, limits not implemented]
 
 ---
 
@@ -543,11 +646,3 @@ urlsearchparams-constructor.html: [fail, Unknown]
 urlsearchparams-delete.html: [fail, Unknown]
 urlsearchparams-foreach.html: [fail, Unknown]
 urlsearchparams-sort.html: [fail, Unknown]
-
-# ---
-
-# DIR: XMLHttpRequest
-
-# ---
-
-# DIR: cors

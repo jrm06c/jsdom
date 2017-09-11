@@ -62,9 +62,9 @@ module.exports = function (testDir) {
     });
   });
 
-  return testPath => {
+  return (testPath, title = testPath) => {
     specify({
-      title: testPath,
+      title,
       expectPromise: true,
       // WPT also takes care of timeouts (maximum 60 seconds), this is an extra failsafe:
       timeout: 70000,

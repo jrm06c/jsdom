@@ -32,12 +32,13 @@ describe("Web platform tests", () => {
       for (const testFilePath of possibleTestFilePaths) {
         if (testFilePath.startsWith(toRunDoc.DIR + "/")) {
           const testFile = stripPrefix(testFilePath, toRunDoc.DIR + "/");
-          const skip = expectationsInDoc(toRunDoc).some(pattern => minimatch(testFile, pattern));
+          const matchingPattern = expectationsInDoc(toRunDoc).find(pattern => minimatch(testFile, pattern));
 
-          if (skip) {
-            specify.skip(testFilePath);
+          if (matchingPattern) {
+            const prefix = toRunDoc[matchingPattern][0];
+            specify.skip(`[${prefix}] ${testFile}`);
           } else {
-            runWebPlatformTest(testFilePath);
+            runWebPlatformTest(testFilePath, testFile);
           }
         }
       }
@@ -73,12 +74,27 @@ function getPossibleTestFilePaths(testharnessTests) {
 
 function checkToRun() {
   // Check that they're alphabetical
-  let last = "";
+  let lastDir = "";
   for (const doc of toRunDocs) {
-    if (doc.DIR < last) {
-      throw new Error(`Bad lexicographical sorting in to-run.yaml: ${doc.DIR} should come before ${last}`);
+    if (doc.DIR < lastDir) {
+      throw new Error(`Bad lexicographical directory sorting in to-run.yaml: ${doc.DIR} should come before ${lastDir}`);
     }
-    last = doc.DIR;
+
+    let lastPattern = "";
+    for (const pattern of expectationsInDoc(doc)) {
+      if (pattern < lastPattern) {
+        throw new Error(
+          "Bad lexicographical expectation pattern sorting in to-run.yaml: " + pattern +
+          " should come before " + lastPattern);
+      }
+
+      const reason = doc[pattern][0];
+      if (reason !== "fail" && reason !== "timeout") {
+        throw new Error(`Bad reason "${reason}" for expectation ${pattern}`);
+      }
+      lastPattern = pattern;
+    }
+    lastDir = doc.DIR;
   }
 
   // Check that there aren't any fail/timeout expectations for files that aren't in the manifest
