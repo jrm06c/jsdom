@@ -23,6 +23,8 @@ require("./old-api/named-properties-tracker.js");
 require("./old-api/resource-loading.js");
 require("./old-api/utils.js");
 
+require("./sizzle/index.js");
+
 require("./to-port-to-wpts/class-list.js");
 require("./to-port-to-wpts/compare-document-position.js");
 require("./to-port-to-wpts/cors.js");

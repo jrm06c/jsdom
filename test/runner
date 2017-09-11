@@ -26,8 +26,6 @@ if (argv.tests) {
 
 var files = [
   "to-port-to-wpts/level3/xpath.js",
-
-  "sizzle/index.js"
 ];
 
 if (fileFilter.length > 0) {
