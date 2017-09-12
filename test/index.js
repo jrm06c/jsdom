@@ -7,6 +7,7 @@ require("./api/basics.js");
 require("./api/encoding.js");
 require("./api/fragment.js");
 require("./api/from-file.js");
+require("./api/from-outside.js");
 require("./api/from-url.js");
 require("./api/methods.js");
 require("./api/options.js");
