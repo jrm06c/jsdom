@@ -14,6 +14,7 @@ script:
 branches:
   only:
     - master
+    - remove/nodeunit
 
 addons:
   hosts:
